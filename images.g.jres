@@ -1,0 +1,23 @@
+{
+    "image1": {
+        "data": "hwQPAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7gAAAAAAAODuAAAAAAAA7u4AAAAAAODu7gAAAAAA7u7uAAAAAODu7u4AAAAAAODu7gAAAAAAAODuAAAAAAAAAO4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "shit"
+    },
+    "image2": {
+        "data": "hwQJAAgAAAAAgAAAAHgIAIAXcYh48R8IePF/iIgXAQAAeAgAAIAAAAAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "monster1"
+    },
+    "song2": {
+        "data": "0078000408020100001c00010a006400f40164000004000000000000000000000000000500000415000400080002202408000c0002202410001800022427",
+        "mimeType": "application/mkcd-song",
+        "displayName": "OPENING SOUND",
+        "namespace": "mySongs."
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
