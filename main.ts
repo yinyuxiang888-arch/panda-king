@@ -48,18 +48,18 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (projectile,
     music.play(music.stringPlayable("B C5 A B C5 A B C5 ", 392), music.PlaybackMode.UntilDone)
     enemy.startEffect(effects.disintegrate, 100)
     if (currentLife > 0) {
-        boss.say("Ouch!", 250)
+        bossImages.say("Ouch!", 250)
     } else {
         enemy.destroy(effects.fire, 500)
         info.changeScoreBy(10)
         bossIndex += 1
-        if (bossIndex < bossImages.length) {
-            pause(700)
-            game.splash("White Bone Demon transforms! Next round!")
-        } else {
-            game.splash("Victory! Monkey King defeats all forms of the White Bone Demon!")
-            game.over(true)
-        }
+    }
+    if (bossImages < bossImages.length) {
+        pause(700)
+        game.splash("White Bone Demon transforms! Next round!")
+    } else {
+        game.splash("Victory! Monkey King defeats all forms of the White Bone Demon!")
+        game.over(true)
     }
 })
 // 孙悟空攻击
@@ -335,9 +335,8 @@ controller.down.onEvent(ControllerButtonEvent.Released, function () {
 let _: number[] = []
 let Music: number[] = []
 let Shit: Sprite = null
-let bossImages: Sprite = null
 let bossIndex = 0
-let boss: Sprite = null
+let bossImages: Sprite = null
 let currentLife = 0
 let Banboo: Sprite = null
 let direction = 0
@@ -562,6 +561,7 @@ game.onUpdate(function () {
 })
 // Boss移动
 game.onUpdate(function () {
+    let boss: Sprite = null
     if (boss) {
         boss.x += Math.sin(game.runtime() / (350 - bossIndex * 100)) * (2 + bossIndex)
     }
